@@ -8,7 +8,9 @@
     "license": "",
     "main": "app.js",
     "dependencies": {
+        "@google-cloud/local-auth": "^1.0.1",
         "express": "^4.12.3",
+        "googleapis": "^39.2.0",
         "swagger-express-mw": "^0.1.0"
     },
     "devDependencies": {
