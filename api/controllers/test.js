@@ -87,4 +87,4 @@ async function runSamples() {
     // console.log(res.data)
 }
 
-runSamples().catch(console.error)
+// runSamples().catch(console.error)
