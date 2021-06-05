@@ -12,4 +12,9 @@ const MOCK_FILES = [
 
 const getFiles = (req, res) => res.json(MOCK_FILES)
 
-module.exports = { getFiles }
+const uploadFile = (req, res) => {
+    console.log("POST FILE", req)
+    res.json({ message: "file uploaded!" })
+}
+
+module.exports = { getFiles, uploadFile }
