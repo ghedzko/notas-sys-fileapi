@@ -18,6 +18,25 @@ consumes:
 produces:
   - application/json
 paths:
+  /files:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: files
+    get:
+      description: Returns a list of files in the selected root folder.
+      operationId: getFiles
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: Successful
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/File"
+        "400":
+          description: "Invalid status value"
+
+
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
@@ -57,4 +76,10 @@ definitions:
       - message
     properties:
       message:
+        type: string
+  File:
+    required:
+        - name
+    properties:
+      name:
         type: string
