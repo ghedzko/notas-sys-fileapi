@@ -40,11 +40,24 @@ paths:
       summary: Uploads a file.
       consumes:
         - multipart/form-data
-      parameters:
-        - in: formData
-          name: upfile
-          type: file
-          description: The file to upload.
+      parameters:        
+         - name: file
+           in: formData
+           required: false
+           type: file
+           description: The file to upload.
+         - name: name
+           in: formData
+           required: false
+           type: string
+         - name: type
+           in: formData
+           required: false
+           type: string
+         - name: description
+           in: formData
+           required: false
+           type: string
       responses:
         "200":
           description: Successful
@@ -52,6 +65,8 @@ paths:
             type: object
         "400":
           description: "Invalid status value"
+          schema:
+            type: object
 
   /hello:
     # binds a127 app logic to a route
