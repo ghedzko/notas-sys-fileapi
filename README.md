@@ -16,4 +16,4 @@ replace `GOOGLE_APP_ID`, `GOOGLE_PROJECT_ID` and `GOOGLE_CLIENT_SECRET` values w
     -   [] get
     -   [] delete
 -   [] deploy on heroku
--   [] get github repo
+-   [x] get github repo
